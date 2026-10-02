@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details - Hope Community Charity</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation (present on all pages) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Hope Community Charity</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html">Search Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Error message shown when the event cannot be loaded -->
+    <div id="detail-error" class="error-message hidden"></div>
+
+    <!-- Event details rendered by js/event-detail.js -->
+    <section id="event-detail" class="event-detail hidden">
+      <span id="event-category" class="category-badge"></span>
+      <h2 id="event-name"></h2>
+
+      <div class="detail-grid">
+        <!-- Left column: description and purpose -->
+        <div class="detail-main">
+          <h3>About this event</h3>
+          <p id="event-description"></p>
+
+          <h3>Purpose of the fundraiser</h3>
+          <p id="event-purpose"></p>
+
+          <!-- Goal vs Progress -->
+          <h3>Fundraising goal</h3>
+          <div class="progress-block">
+            <div class="progress-labels">
+              <span id="progress-amount"></span>
+              <span id="goal-amount"></span>
+            </div>
+            <div class="progress-bar">
+              <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <p id="progress-percent" class="progress-percent"></p>
+          </div>
+
+          <h3>Organised by</h3>
+          <div class="org-block">
+            <p id="org-name" class="org-name"></p>
+            <p id="org-description"></p>
+            <p id="org-contact" class="org-contact"></p>
+          </div>
+        </div>
+
+        <!-- Right column: event facts and registration -->
+        <aside class="detail-side">
+          <div class="ticket-card">
+            <h3>Event details</h3>
+            <p><strong>&#128197; Date:</strong> <span id="event-date"></span></p>
+            <p><strong>&#128336; Time:</strong> <span id="event-time"></span></p>
+            <p><strong>&#128205; Venue:</strong> <span id="event-venue"></span></p>
+            <p><strong>&#127961; City:</strong> <span id="event-city"></span></p>
+            <p class="ticket-price"><strong>Ticket price:</strong> <span id="event-ticket"></span></p>
+
+            <!-- Register button: shows "under construction" dialog -->
+            <button id="register-btn" class="btn btn-primary btn-full">Register</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Hope Community Charity | info@hopecommunity.org.au | (02) 9123 4567</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/event-detail.js"></script>
+</body>
+</html>
