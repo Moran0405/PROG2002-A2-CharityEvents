@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hope Community Charity - Charity Events</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation (present on all pages) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Hope Community Charity</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="search.html">Search Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero section: static organisation information -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Together, We Can Change Lives</h1>
+      <p class="mission">
+        Hope Community Charity is a non-profit organisation dedicated to supporting
+        disadvantaged families, homeless youth and local community health programs
+        across the city. Every dollar raised goes directly to the people who need it most.
+      </p>
+      <div class="hero-contact">
+        <span>&#9993; info@hopecommunity.org.au</span>
+        <span>&#9742; (02) 9123 4567</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="events-section">
+      <h2>Upcoming Charity Events</h2>
+      <p class="section-subtitle">Join one of our upcoming events and make a difference in your community.</p>
+
+      <!-- Error message (DOM manipulation) -->
+      <div id="home-error" class="error-message hidden"></div>
+
+      <!-- Dynamic event listing rendered by js/home.js -->
+      <div id="events-grid" class="events-grid">
+        <p class="loading-text">Loading events...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Hope Community Charity | info@hopecommunity.org.au | (02) 9123 4567</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
