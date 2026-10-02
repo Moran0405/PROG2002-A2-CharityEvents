@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Events - Hope Community Charity</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation (present on all pages) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Hope Community Charity</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html" class="active">Search Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="search-section">
+      <h2>Search Charity Events</h2>
+      <p class="section-subtitle">
+        Find events by date, location and/or category. You may combine any of the criteria below.
+      </p>
+
+      <!-- Search form: date, location, category -->
+      <form id="search-form" class="search-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="search-date">Date</label>
+            <input type="date" id="search-date" name="date">
+          </div>
+
+          <div class="form-group">
+            <label for="search-location">Location</label>
+            <input type="text" id="search-location" name="location"
+                   placeholder="e.g. Sydney or Centennial Park">
+          </div>
+
+          <div class="form-group">
+            <label for="search-category">Category</label>
+            <select id="search-category" name="category">
+              <option value="">All categories</option>
+              <!-- Options populated from GET /api/categories -->
+            </select>
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn btn-primary">Search</button>
+          <button type="button" id="clear-filters" class="btn btn-secondary">Clear Filters</button>
+        </div>
+      </form>
+
+      <!-- Error / info messages (DOM manipulation) -->
+      <div id="search-error" class="error-message hidden"></div>
+
+      <!-- Search results -->
+      <div id="search-results" class="events-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Hope Community Charity | info@hopecommunity.org.au | (02) 9123 4567</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>
